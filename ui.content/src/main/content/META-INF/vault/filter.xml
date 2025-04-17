@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<workspaceFilter version="1.0">
+    <filter root="/conf/perficient-lumax-aem" mode="merge"/>
+    <filter root="/content/perficient-lumax-aem" mode="merge"/>
+    <filter root="/content/dam/perficient-lumax-aem" mode="merge">
+        <exclude pattern="/content/dam/perficient-lumax-aem(/.*)?"/>
+        <include pattern="/content/dam/perficient-lumax-aem/jcr:content(/.*)?"/>
+    </filter>
+    <filter root="/content/dam/perficient-lumax-aem/asset.jpg" mode="merge"/>
+    <filter root="/content/experience-fragments/perficient-lumax-aem" mode="merge"/>
+</workspaceFilter>
