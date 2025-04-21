@@ -20,8 +20,7 @@
 <sly data-sly-use.clientLib="/libs/granite/sightly/templates/clientlib.html"
      data-sly-call="${clientlib.css @ categories='perficient-lumax-aem.base'}"/>
 
-<!--/* Include Context Hub */-->
-<sly data-sly-resource="${'contexthub' @ resourceType='granite/contexthub/components/contexthub'}"/>
+<link data-sly-test="${!wcmmode.disabled}" rel="stylesheet" href="https://lumax.streamx.com/web-resources/css/tailwind-output.css">
 
 <sly data-sly-use.page="com.adobe.cq.wcm.core.components.models.Page"
      data-sly-list="${page.htmlPageItems}">

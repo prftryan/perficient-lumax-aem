@@ -4,7 +4,7 @@
      data-sly-use.actionsTemplate="actions.html"
      data-sly-test.hasContent="${teaser.imageResource || teaser.pretitle || teaser.title || teaser.description || teaser.actions.size > 0}"
      id="${teaser.id}"
-     class="cmp-teaser${!wcmmode.disabled && teaser.imageResource ? ' cq-dd-image' : ''}"
+     class="cmp-teaser bg-gradient-to-r from-dsg-red/90 to-dsg-red mb-8 rounded-lg shadow-lg overflow-hidden${!wcmmode.disabled && teaser.imageResource ? ' cq-dd-image' : ''}"
      data-cmp-data-layer="${teaser.data.json}">
      <div class="flex flex-col md:flex-row items-center p-6">
         <div class="w-full md:w-1/4 mb-4 md:mb-0">
@@ -21,7 +21,7 @@
                 <span class="font-semibold" class="cf--promo-banner--pretilte">${teaser.pretitle}</span>
             </div>
             <h2 class="text-2xl font-bold mb-2 cf--promo-banner--title" data-sly-element="${teaser.titleType}">${teaser.title}</h2>
-            <p class="mb-4 cf--promo-banner--text">${teaser.description}</p>
+            <p class="mb-4 cf--promo-banner--text">${teaser.description @context='unsafe'}</p>
             <div class="flex items-center gap-4">
                 <sly data-sly-call="${actionsTemplate.actions @ teaser=teaser}"></sly>
             </div>
